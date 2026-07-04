@@ -248,16 +248,24 @@ input,select,textarea{font-family:inherit;font-size:inherit}
     .nav-links li{border-bottom:1px solid rgba(255,255,255,0.08)}
     .nav-links a{display:block;padding:18px 0;font-size:1.1rem;color:rgba(255,255,255,0.8)}
     .hero-content{padding:140px 24px 100px;margin:0}
-    .hero-stats{flex-direction:column;gap:20px;align-items:flex-start}
-    .stat-divider{width:40px;height:1px}
+    .hero-stats{flex-direction:row;gap:16px;flex-wrap:wrap}
+    .stat{flex:1;min-width:80px}
+    .stat-number{font-size:1.8rem}
+    .stat-suffix{font-size:1.4rem}
+    .stat-label{font-size:0.65rem;letter-spacing:0.5px}
+    .stat-divider{width:1px;height:auto}
     .hero-actions{flex-direction:column}
     .hero-actions .btn{text-align:center;justify-content:center}
     .hero-scroll{display:none}
-    .experience-visual{height:350px}
-    .exp-card-1{top:10px;left:10px;padding:20px}
+    /* Experience section - completely reworked for mobile */
+    .experience{padding:80px 0}
+    .experience-visual{height:auto;max-width:100%;position:static}
+    .exp-card{position:static;box-shadow:var(--shadow-md)}
+    .exp-card-1{display:flex;align-items:center;gap:16px;padding:20px;margin-bottom:16px;border-radius:var(--radius-md)}
     .exp-number{font-size:2.5rem}
-    .exp-card-2{bottom:20px;right:10px;padding:16px 20px}
-    .exp-image-frame{top:50px;left:40px;right:20px;bottom:60px}
+    .exp-image-frame{position:static;border-radius:var(--radius-md);overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:4/3;margin-bottom:16px}
+    .exp-image-frame img{width:100%;height:100%;object-fit:cover}
+    .exp-card-2{display:flex;align-items:center;gap:12px;padding:16px 20px;border-radius:var(--radius-md)}
     .services-grid{grid-template-columns:1fr}
     .service-card:hover{transform:none}
     .consultation{padding:80px 0}
@@ -268,13 +276,24 @@ input,select,textarea{font-family:inherit;font-size:inherit}
     .footer-bottom{flex-direction:column;gap:8px;text-align:center}
 }
 @media(max-width:480px){
+    .hero{min-height:100svh}
+    .hero-content{padding:120px 20px 80px}
     .hero-title{font-size:2.2rem}
+    .hero-subtitle{font-size:0.95rem;margin-bottom:28px}
+    .hero-actions{margin-bottom:40px}
     .section-title{font-size:1.8rem}
     .hero-badge{font-size:0.7rem;padding:6px 14px}
-    .stat-number{font-size:2rem}
+    .stat-number{font-size:1.6rem}
+    .stat-suffix{font-size:1.2rem}
+    .stat-label{font-size:0.6rem}
     .floating-buttons{bottom:20px;right:16px}
     .float-btn{width:46px;height:46px}
     .float-btn svg{width:20px;height:20px}
     .gallery-modal-content{padding:32px 20px}
     .gallery-grid{grid-template-columns:1fr}
+    .experience{padding:60px 0}
+    .consultation{padding:60px 0}
+    .services{padding:60px 0}
+    .faq{padding:60px 0}
+    .section-header{margin-bottom:40px}
 }
